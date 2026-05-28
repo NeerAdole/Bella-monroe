@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Monroe Bridal — Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Bella Monroe<span>Bridal Boutique</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a><a href="collections.html">Collections</a><a href="lookbook.html">Lookbook</a>
+    <a href="about.html">About</a><a href="appointments.html">Appointments</a><a href="contact.html">Contact</a>
+  </div>
+
+  <header class="page-header">
+    <p class="eyebrow">✦ Say Hello ✦</p>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you</p>
+  </header>
+
+  <section class="section section--ivory">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Info Column -->
+        <div class="contact-info reveal">
+          <h2>Get in Touch</h2>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">📍</div>
+            <div class="contact-detail__text">
+              <strong>Address</strong>
+              <span>12 Bridal Lane, Teneriffe<br>Brisbane QLD 4005</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">📞</div>
+            <div class="contact-detail__text">
+              <strong>Phone</strong>
+              <span>(07) 3210 9876</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">✉️</div>
+            <div class="contact-detail__text">
+              <strong>Email</strong>
+              <span>hello@bellamonroe.com.au</span>
+            </div>
+          </div>
+
+          <div class="contact-hours">
+            <h4>Trading Hours</h4>
+            <div class="hours-row"><span>Monday – Friday</span><span>9:00 AM – 5:00 PM</span></div>
+            <div class="hours-row"><span>Saturday</span><span>9:00 AM – 5:00 PM</span></div>
+            <div class="hours-row"><span>Sunday</span><span>By appointment only</span></div>
+          </div>
+
+          <div class="map-placeholder">
+            📍 Google Map — 12 Bridal Lane, Teneriffe QLD
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Pinterest">Pi</a>
+            <a href="#" aria-label="Facebook">Fb</a>
+          </div>
+        </div>
+
+        <!-- Form Column (JS Interaction #9) -->
+        <div class="reveal">
+          <p class="eyebrow" style="margin-bottom:24px;">✦ Send a Message ✦</p>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="c-name">Your Name</label>
+              <input type="text" id="c-name" placeholder="e.g. Sophie Reynolds" required />
+              <span class="field-error">Please enter your name</span>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email Address</label>
+              <input type="email" id="c-email" placeholder="you@email.com" required />
+              <span class="field-error">Please enter a valid email address</span>
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Phone Number</label>
+              <input type="tel" id="c-phone" placeholder="e.g. 0412 345 678" required />
+              <span class="field-error">Please enter your phone number</span>
+            </div>
+            <div class="form-group">
+              <label for="c-msg">Message</label>
+              <textarea id="c-msg" placeholder="How can we help you?" style="min-height:140px;" required></textarea>
+              <span class="field-error">Please enter a message</span>
+            </div>
+            <button type="submit" class="btn btn--rose">Send Message</button>
+          </form>
+          <div class="form-success" id="contact-success">
+            <p style="font-size:1.5rem;">💌</p>
+            <h3 style="font-family:var(--font-display);font-style:italic;margin:8px 0;">Message Sent!</h3>
+            <p style="color:var(--warm-grey);">Thank you for reaching out. We'll get back to you within one business day.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand"><h3>Bella Monroe</h3><span>Bridal Boutique</span><p>Brisbane's luxury bridal destination.</p></div>
+        <div class="footer__col"><h4>Navigate</h4><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="lookbook.html">Lookbook</a><a href="about.html">About Us</a></div>
+        <div class="footer__col"><h4>Visit</h4><a href="appointments.html">Book Appointment</a><a href="contact.html">Contact Us</a></div>
+        <div class="footer__col"><h4>Follow</h4><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Facebook</a></div>
+      </div>
+      <div class="footer__bottom"><span>&copy; 2026 Bella Monroe Bridal.</span><span>DECO1400 — Neer Adole 49187227</span></div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

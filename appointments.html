@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Monroe Bridal — Appointments</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Bella Monroe<span>Bridal Boutique</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="appointments.html" class="active">Appointments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a><a href="collections.html">Collections</a><a href="lookbook.html">Lookbook</a>
+    <a href="about.html">About</a><a href="appointments.html">Appointments</a><a href="contact.html">Contact</a>
+  </div>
+
+  <header class="page-header">
+    <p class="eyebrow">✦ Your Experience ✦</p>
+    <h1>Book an Appointment</h1>
+    <p>In-store and virtual consultations available</p>
+  </header>
+
+  <section class="section section--ivory">
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- Form Side -->
+        <div>
+          <!-- Progress Steps (JS Interaction #8) -->
+          <div class="progress-steps">
+            <div class="step active">1. Appointment</div>
+            <div class="step">2. Your Details</div>
+            <div class="step">3. Confirm</div>
+          </div>
+
+          <form id="booking-form" novalidate>
+
+            <!-- Step 1: Appointment Type -->
+            <div class="form-step active">
+              <div class="form-group">
+                <label for="appt-type">Appointment Type</label>
+                <select id="appt-type" required>
+                  <option value="">Please select…</option>
+                  <option value="in-store">In-Store Fitting</option>
+                  <option value="virtual">Virtual Consultation</option>
+                </select>
+                <span class="field-error">Please select an appointment type</span>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pref-date">Preferred Date</label>
+                  <input type="date" id="pref-date" required />
+                  <span class="field-error">Please select a date</span>
+                </div>
+                <div class="form-group">
+                  <label for="pref-time">Preferred Time</label>
+                  <select id="pref-time" required>
+                    <option value="">Select time…</option>
+                    <option>9:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>1:00 PM</option>
+                    <option>2:00 PM</option>
+                    <option>3:00 PM</option>
+                    <option>4:00 PM</option>
+                  </select>
+                  <span class="field-error">Please select a time</span>
+                </div>
+              </div>
+              <div class="step-btns">
+                <button type="button" class="btn btn--rose btn-next">Next →</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Your Details -->
+            <div class="form-step">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" placeholder="e.g. Sophie" required />
+                  <span class="field-error">Please enter your first name</span>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" placeholder="e.g. Reynolds" required />
+                  <span class="field-error">Please enter your last name</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@email.com" required />
+                <span class="field-error">Please enter a valid email address</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="e.g. 0412 345 678" required />
+                <span class="field-error">Please enter your phone number</span>
+              </div>
+              <div class="form-group">
+                <label for="message">Special Requirements (optional)</label>
+                <textarea id="message" placeholder="Tell us about your vision, wedding date, or any special needs…"></textarea>
+              </div>
+              <div class="step-btns">
+                <button type="button" class="btn btn-prev">← Back</button>
+                <button type="button" class="btn btn--rose btn-next">Next →</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Confirm -->
+            <div class="form-step">
+              <div style="background:var(--blush);padding:28px;margin-bottom:24px;">
+                <p class="eyebrow" style="margin-bottom:8px;">Your Booking Summary</p>
+                <p style="font-size:0.9rem;color:var(--warm-grey);">Please review your details before submitting.</p>
+              </div>
+              <div class="form-group">
+                <label style="color:var(--warm-grey);font-size:0.82rem;">By submitting, you agree to our appointment terms. We'll confirm your booking within 24 hours.</label>
+              </div>
+              <div class="step-btns">
+                <button type="button" class="btn btn-prev">← Back</button>
+                <button type="submit" class="btn btn--rose">Request Appointment</button>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- Success message -->
+          <div class="form-success" id="booking-success">
+            <p style="font-size:1.5rem;">💌</p>
+            <h3 style="font-family:var(--font-display);font-style:italic;margin:8px 0;">Request Received!</h3>
+            <p style="color:var(--warm-grey);">Thank you! We'll confirm your appointment within 24 hours.</p>
+          </div>
+        </div>
+
+        <!-- Info Aside -->
+        <div class="form-aside">
+          <h3>What to Expect</h3>
+          <div class="detail">
+            <span>📍</span>
+            <div>
+              <strong style="font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--rose);">Location</strong>
+              <p>12 Bridal Lane, Teneriffe<br>Brisbane QLD 4005</p>
+            </div>
+          </div>
+          <div class="detail">
+            <span>⏱️</span>
+            <div>
+              <strong style="font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--rose);">Duration</strong>
+              <p>Each appointment is 90 minutes, dedicated entirely to you.</p>
+            </div>
+          </div>
+          <div class="detail">
+            <span>👥</span>
+            <div>
+              <strong style="font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--rose);">Guests</strong>
+              <p>Bring up to 3 loved ones to share the experience.</p>
+            </div>
+          </div>
+          <div class="detail">
+            <span>📅</span>
+            <div>
+              <strong style="font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--rose);">Hours</strong>
+              <p>Mon–Sat: 9am–5pm<br>Sun: By appointment only</p>
+            </div>
+          </div>
+          <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.15);font-style:italic;font-family:var(--font-display);font-size:1.1rem;color:var(--rose-light);">
+            "Finding your dress should feel like magic. We're here to make that happen."
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion (JS Interaction #7) -->
+  <section class="section section--blush">
+    <div class="container" style="max-width:780px;">
+      <div class="section__heading reveal">
+        <p class="eyebrow">✦ FAQ ✦</p>
+        <h2>Frequently Asked Questions</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-item__q">How long does an appointment take? <span class="icon">+</span></button>
+          <div class="faq-item__a">Each bridal appointment is 90 minutes. This gives you plenty of time to try a range of styles and talk through your vision with your stylist without feeling rushed.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">What should I bring to my fitting? <span class="icon">+</span></button>
+          <div class="faq-item__a">We recommend wearing nude, seamless underwear and bringing any shoes with a similar heel height to what you plan to wear. If you have inspiration images, bring those too — the more we know, the better!</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">How far in advance should I book? <span class="icon">+</span></button>
+          <div class="faq-item__a">We recommend booking your appointment 12–18 months before your wedding date to allow time for ordering, production, and alterations. However, we do have some gowns available for shorter lead times — ask us!</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">Do you offer alterations? <span class="icon">+</span></button>
+          <div class="faq-item__a">Yes! Our in-house alterations specialist Mia ensures your gown fits you perfectly. Alteration costs vary depending on the scope of work and are quoted separately.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">What sizes do you carry in-store? <span class="icon">+</span></button>
+          <div class="faq-item__a">Our sample gowns range from size 8 to 22. All gowns can be ordered in sizes 6–28. Our stylists are experienced in helping every bride visualise how a gown will look in their size.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">Is there a consultation fee? <span class="icon">+</span></button>
+          <div class="faq-item__a">Our appointments are complimentary. We believe every bride deserves to experience the magic of trying on gowns without any pressure or upfront cost.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand"><h3>Bella Monroe</h3><span>Bridal Boutique</span><p>Brisbane's luxury bridal destination.</p></div>
+        <div class="footer__col"><h4>Navigate</h4><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="lookbook.html">Lookbook</a><a href="about.html">About Us</a></div>
+        <div class="footer__col"><h4>Visit</h4><a href="appointments.html">Book Appointment</a><a href="contact.html">Contact Us</a></div>
+        <div class="footer__col"><h4>Follow</h4><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Facebook</a></div>
+      </div>
+      <div class="footer__bottom"><span>&copy; 2026 Bella Monroe Bridal.</span><span>DECO1400 — Neer Adole 49187227</span></div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
